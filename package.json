@@ -1,0 +1,39 @@
+{
+  "name": "reactnative_navigation",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test-ci": "react-scripts test --env=jsdom --coverage --testResultsProcessor=jest-teamcity-reporter",
+    "start-x": "react-native run-ios --simulator 'iPhone X' ",
+    "start": "react-native start",
+    "link-toast": "react-native link react-native-simple-toast",
+    "link": "react-native link",
+    "android": "react-native run-android",
+    "detox-debug": "detox test -c android.emu.debug",
+    "detox-ci": "detox test -c android.emu.ci",
+    "link-svg": "react-native link react-native-svg",
+    "rn-firebase": "react-native link react-native-firebase",
+    "link-restart": "react-native link react-native-restart",
+    "ios": "react-native run-ios --simulator 'iPhone 7'",
+    "eject": "react-native eject",
+    "test": "jest --testMatch=\"**/__tests__/**/!(*e2e.js)\"",
+    "bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "postinstall": "sed -i '' 's/#import <RCTAnimation\\/RCTValueAnimatedNode.h>/#import \"RCTValueAnimatedNode.h\"/' ./node_modules/react-native/Libraries/NativeAnimation/RCTNativeAnimatedNodesManager.h"
+  },
+  "dependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.1",
+    "react-native-navigation": "^2.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/runtime": "^7.3.4",
+    "babel-jest": "^24.5.0",
+    "jest": "^24.5.0",
+    "metro-react-native-babel-preset": "^0.53.1",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
